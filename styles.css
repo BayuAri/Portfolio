@@ -504,6 +504,12 @@ ul {
   color: #223126;
 }
 
+.contact-notes span {
+  background: rgba(255, 249, 241, 0.92);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #223126;
+}
+
 .site-footer {
   color: var(--muted);
   font-size: 0.92rem;
