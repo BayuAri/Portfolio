@@ -102,7 +102,7 @@ ul {
 }
 
 .section {
-  margin-bottom: 26px;
+  margin-bottom: 42px;
 }
 
 .hero,
@@ -135,7 +135,7 @@ ul {
 }
 
 .hero-copy {
-  padding: 42px;
+  padding: 48px;
 }
 
 .eyebrow,
@@ -201,7 +201,7 @@ ul {
 .hero-text {
   font-size: 1.08rem;
   margin: 28px 0 0;
-  max-width: 62ch;
+  max-width: 36ch;
 }
 
 .hero-text-secondary {
@@ -256,7 +256,8 @@ ul {
 .mini-facts span,
 .skill-cloud span,
 .tool-grid span,
-.contact-notes span {
+.contact-notes span,
+.case-signals span {
   background: var(--surface-strong);
   border: 1px solid rgba(27, 39, 31, 0.08);
   border-radius: 16px;
@@ -369,7 +370,7 @@ ul {
 }
 
 .section-heading {
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .section-heading h2,
@@ -389,7 +390,7 @@ ul {
 .experience-card,
 .device-panel,
 .education-panel {
-  padding: 24px;
+  padding: 28px;
 }
 
 .achievement-card-featured {
@@ -424,6 +425,23 @@ ul {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.case-study-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) padding-box,
+    var(--surface);
+  position: relative;
+}
+
+.case-study-card::before {
+  background: linear-gradient(90deg, rgba(23, 111, 81, 0.96), rgba(189, 123, 23, 0.82));
+  border-radius: 999px;
+  content: "";
+  display: block;
+  height: 4px;
+  margin-bottom: 18px;
+  width: 72px;
+}
+
 .case-study-head {
   color: var(--muted);
   display: grid;
@@ -453,9 +471,32 @@ ul {
   width: 100%;
 }
 
+.case-study-card h3 {
+  font-size: 1.85rem;
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.case-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.case-signals span {
+  background: rgba(15, 79, 58, 0.06);
+  font-size: 0.82rem;
+  padding: 10px 12px;
+}
+
+.case-study-card > p {
+  max-width: 34ch;
+}
+
 .case-points {
   list-style: none;
-  margin-top: 14px;
+  margin-top: 18px;
 }
 
 .case-points li {
@@ -643,6 +684,10 @@ ul {
   .education-panel,
   .contact-panel {
     padding: 22px;
+  }
+
+  .case-study-card {
+    padding: 24px;
   }
 
   .hero h1,
