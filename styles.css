@@ -423,10 +423,12 @@ ul {
   background: rgba(15, 79, 58, 0.07);
   border-radius: 999px;
   display: inline-flex;
+  font-size: 0.82rem;
+  justify-content: center;
   max-width: 100%;
-  padding: 8px 14px;
-  white-space: nowrap;
-  width: max-content;
+  padding: 8px 12px;
+  text-align: center;
+  width: 100%;
 }
 
 .case-points {
