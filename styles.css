@@ -127,7 +127,7 @@ body.is-edit-mode .portrait-note.editor-only {
 
 .hero {
   grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.82fr);
-  align-items: stretch;
+  align-items: start;
 }
 
 .hero-copy,
@@ -259,6 +259,7 @@ body.is-edit-mode .portrait-note.editor-only {
 }
 
 .hero-card {
+  align-self: start;
   overflow: hidden;
 }
 
@@ -266,15 +267,27 @@ body.is-edit-mode .portrait-note.editor-only {
   background:
     radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.52), transparent 28%),
     linear-gradient(160deg, #d2ecd8 0%, #b6d8c3 100%);
-  min-height: 340px;
-  padding: 24px 24px 0;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  padding: 24px;
 }
 
 .portrait-frame img {
-  border-radius: 24px 24px 0 0;
+  border-radius: 24px;
   height: 100%;
-  margin: 0 auto;
+  width: 100%;
   object-fit: cover;
+  object-position: center 18%;
+}
+
+@supports not (aspect-ratio: 4 / 5) {
+  .portrait-frame {
+    min-height: 520px;
+  }
+}
+
+.portrait-frame img {
+  margin: 0 auto;
 }
 
 .hero-card-copy {
@@ -638,6 +651,7 @@ body.is-edit-mode .portrait-note.editor-only {
   }
 
   .hero-copy,
+  .hero-card,
   .achievement-card,
   .service-card,
   .experience-card,
@@ -652,6 +666,15 @@ body.is-edit-mode .portrait-note.editor-only {
   .split h2,
   .contact-panel h2 {
     max-width: none;
+  }
+
+  .portrait-frame {
+    aspect-ratio: 1 / 1;
+    padding: 18px;
+  }
+
+  .portrait-frame img {
+    object-position: center 15%;
   }
 
   .achievement-card-featured {
