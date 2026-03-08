@@ -267,7 +267,7 @@ body.is-edit-mode .portrait-note.editor-only {
   background:
     radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.52), transparent 28%),
     linear-gradient(160deg, #d2ecd8 0%, #b6d8c3 100%);
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   padding: 24px;
 }
@@ -277,12 +277,12 @@ body.is-edit-mode .portrait-note.editor-only {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 22%;
 }
 
-@supports not (aspect-ratio: 4 / 5) {
+@supports not (aspect-ratio: 1 / 1) {
   .portrait-frame {
-    min-height: 520px;
+    min-height: 420px;
   }
 }
 
@@ -619,6 +619,10 @@ body.is-edit-mode .portrait-note.editor-only {
     grid-column: span 2;
     grid-row: span 1;
   }
+
+  .portrait-frame {
+    aspect-ratio: 4 / 5;
+  }
 }
 
 @media (max-width: 760px) {
@@ -669,12 +673,12 @@ body.is-edit-mode .portrait-note.editor-only {
   }
 
   .portrait-frame {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 5;
     padding: 18px;
   }
 
   .portrait-frame img {
-    object-position: center 15%;
+    object-position: center 18%;
   }
 
   .achievement-card-featured {
