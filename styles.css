@@ -52,18 +52,6 @@ ul {
   padding: 24px;
 }
 
-.editor-only {
-  display: none;
-}
-
-body.is-edit-mode .editor-only {
-  display: flex;
-}
-
-body.is-edit-mode .portrait-note.editor-only {
-  display: block;
-}
-
 .site-header,
 .site-footer,
 .site-nav,
@@ -299,41 +287,6 @@ body.is-edit-mode .portrait-note.editor-only {
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 12px;
-}
-
-.photo-control {
-  align-items: center;
-  border-radius: 999px;
-  cursor: pointer;
-  display: inline-flex;
-  font-size: 0.88rem;
-  font-weight: 800;
-  justify-content: center;
-  min-height: 42px;
-  padding: 0 16px;
-  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
-}
-
-.photo-control:hover {
-  transform: translateY(-1px);
-}
-
-.photo-upload {
-  background: var(--accent);
-  color: #f6fff9;
-}
-
-.photo-reset {
-  background: transparent;
-  border: 1px solid var(--line);
-  color: var(--ink);
-}
-
-.portrait-note {
-  color: var(--muted);
-  font-size: 0.85rem;
-  line-height: 1.6;
-  margin: 0 0 16px;
 }
 
 .status-pill {
