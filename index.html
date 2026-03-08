@@ -58,11 +58,25 @@
         <aside class="hero-card">
           <div class="portrait-frame">
             <img
+              id="profile-image"
               src="https://www.upwork.com/profile-portraits/c1DdoA13XWk9_oTpSR0HodHjVtW9awbjXzdk_nhE7b8Q4YKkNRJjI2RONcEBAbJylx"
+              data-default-src="https://www.upwork.com/profile-portraits/c1DdoA13XWk9_oTpSR0HodHjVtW9awbjXzdk_nhE7b8Q4YKkNRJjI2RONcEBAbJylx"
               alt="Portrait of Bayu Ari"
             >
           </div>
           <div class="hero-card-copy">
+            <div class="portrait-toolbar">
+              <label class="photo-control photo-upload" for="photo-input">
+                Upload new photo
+              </label>
+              <input id="photo-input" type="file" accept="image/*" hidden>
+              <button id="photo-reset" class="photo-control photo-reset" type="button">
+                Reset
+              </button>
+            </div>
+            <p class="portrait-note">
+              Tip: use the upload button to replace the photo from this browser. The selection is stored locally on your device.
+            </p>
             <p class="status-pill">Available for 30 to 45 hrs/week</p>
             <div class="stat-grid">
               <article>
