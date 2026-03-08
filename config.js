@@ -1,6 +1,6 @@
 window.PORTFOLIO_CONFIG = {
   analytics: {
-    ga4MeasurementId: "",
+    ga4MeasurementId: "G-VFZ8DLDSXY",
   },
   editing: {
     queryParam: "edit",
