@@ -155,11 +155,19 @@ ul {
   margin: 0 0 16px;
 }
 
+.hero-role {
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0 0 18px;
+}
+
 .hero .eyebrow {
-  font-size: 1.22rem;
-  letter-spacing: -0.02em;
-  margin-bottom: 28px;
-  text-transform: none;
+  font-size: 0.98rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 30px;
 }
 
 .hero h1,
