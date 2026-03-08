@@ -423,11 +423,14 @@ ul {
   background: rgba(15, 79, 58, 0.07);
   border-radius: 999px;
   display: inline-flex;
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   justify-content: center;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
   max-width: 100%;
-  padding: 8px 12px;
+  padding: 8px 10px;
   text-align: center;
+  white-space: nowrap;
   width: 100%;
 }
 
