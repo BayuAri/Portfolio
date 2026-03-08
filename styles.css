@@ -469,19 +469,26 @@ ul {
 .github-overview-grid article {
   background: rgba(15, 79, 58, 0.05);
   border-radius: 18px;
+  display: grid;
+  gap: 10px;
   padding: 16px;
 }
 
-.github-overview-grid strong {
-  color: var(--ink);
-  display: block;
-  font-size: 1.35rem;
-  margin-bottom: 6px;
+.github-badge {
+  border-radius: 999px;
+  max-width: 100%;
 }
 
 .github-overview-grid span {
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.github-profile-summary strong {
+  color: var(--ink);
+  display: block;
+  font-size: 1.35rem;
+  margin-bottom: 2px;
 }
 
 .github-feed {
@@ -524,6 +531,12 @@ ul {
 .github-feed-list span {
   color: var(--muted);
   font-size: 0.88rem;
+}
+
+.github-feed-list a {
+  color: var(--accent-deep);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .github-links {

@@ -17,15 +17,7 @@ if (githubGraphImage) {
 
 if (githubPanel) {
   const githubUser = githubPanel.dataset.githubUser;
-  const fieldNodes = {
-    public_repos: githubPanel.querySelector('[data-github-field="public_repos"]'),
-    followers: githubPanel.querySelector('[data-github-field="followers"]'),
-    following: githubPanel.querySelector('[data-github-field="following"]'),
-    updated_at: githubPanel.querySelector('[data-github-field="updated_at"]'),
-  };
   const eventsNode = githubPanel.querySelector("[data-github-events]");
-
-  const numberFormatter = new Intl.NumberFormat("en-US");
   const dateFormatter = new Intl.DateTimeFormat("en-US", {
     month: "short",
     day: "numeric",
@@ -67,51 +59,42 @@ if (githubPanel) {
       .join("");
   };
 
-  const renderGithubProfile = (profile) => {
-    if (fieldNodes.public_repos) {
-      fieldNodes.public_repos.textContent = numberFormatter.format(
-        profile.public_repos || 0
-      );
+  const renderGithubFallback = () => {
+    if (!eventsNode) {
+      return;
     }
 
-    if (fieldNodes.followers) {
-      fieldNodes.followers.textContent = numberFormatter.format(
-        profile.followers || 0
-      );
-    }
-
-    if (fieldNodes.following) {
-      fieldNodes.following.textContent = numberFormatter.format(
-        profile.following || 0
-      );
-    }
-
-    if (fieldNodes.updated_at) {
-      fieldNodes.updated_at.textContent = profile.updated_at
-        ? dateFormatter.format(new Date(profile.updated_at))
-        : "--";
-    }
+    eventsNode.innerHTML =
+      '<li><strong>Live public activity is temporarily unavailable</strong><span>Open <a href="https://github.com/' +
+      githubUser +
+      '" target="_blank" rel="noreferrer">github.com/' +
+      githubUser +
+      "</a> for the latest activity and repository history.</span></li>";
   };
 
-  Promise.all([
-    fetch("https://api.github.com/users/" + githubUser),
-    fetch("https://api.github.com/users/" + githubUser + "/events/public?per_page=4"),
-  ])
-    .then(async ([profileResponse, eventsResponse]) => {
-      if (!profileResponse.ok || !eventsResponse.ok) {
-        throw new Error("GitHub API request failed");
+  const controller = new AbortController();
+  const timeoutId = window.setTimeout(() => controller.abort(), 4500);
+
+  fetch("https://api.github.com/users/" + githubUser + "/events/public?per_page=4", {
+    headers: {
+      Accept: "application/vnd.github+json",
+      "X-GitHub-Api-Version": "2022-11-28",
+    },
+    signal: controller.signal,
+  })
+    .then(async (eventsResponse) => {
+      window.clearTimeout(timeoutId);
+
+      if (!eventsResponse.ok) {
+        throw new Error("GitHub activity request failed");
       }
 
-      const profile = await profileResponse.json();
       const events = await eventsResponse.json();
-      renderGithubProfile(profile);
       renderGithubEvents(Array.isArray(events) ? events : []);
     })
     .catch(() => {
-      if (eventsNode) {
-        eventsNode.innerHTML =
-          "<li>GitHub activity is temporarily unavailable.</li>";
-      }
+      window.clearTimeout(timeoutId);
+      renderGithubFallback();
     });
 }
 
