@@ -52,6 +52,18 @@ ul {
   padding: 24px;
 }
 
+.editor-only {
+  display: none;
+}
+
+body.is-edit-mode .editor-only {
+  display: flex;
+}
+
+body.is-edit-mode .portrait-note.editor-only {
+  display: block;
+}
+
 .site-header,
 .site-footer,
 .site-nav,
@@ -534,6 +546,15 @@ ul {
 .contact-panel p,
 .contact-panel .eyebrow {
   color: rgba(238, 247, 239, 0.82);
+}
+
+.contact-email {
+  margin: 0 0 16px;
+}
+
+.contact-email a {
+  color: #f6d89d;
+  font-weight: 700;
 }
 
 .contact-panel .button-secondary {

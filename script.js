@@ -3,9 +3,17 @@ const profileImage = document.getElementById("profile-image");
 const photoInput = document.getElementById("photo-input");
 const photoReset = document.getElementById("photo-reset");
 const profilePhotoStorageKey = "portfolio.profilePhoto";
+const searchParams = new URLSearchParams(window.location.search);
+const editQueryParam =
+  window.PORTFOLIO_CONFIG?.editing?.queryParam || "edit";
+const isEditMode = searchParams.get(editQueryParam) === "1";
 
 if (yearNode) {
   yearNode.textContent = new Date().getFullYear();
+}
+
+if (isEditMode) {
+  document.body.classList.add("is-edit-mode");
 }
 
 if (profileImage) {
@@ -16,7 +24,7 @@ if (profileImage) {
   }
 }
 
-if (profileImage && photoInput) {
+if (isEditMode && profileImage && photoInput) {
   photoInput.addEventListener("change", (event) => {
     const file = event.target.files && event.target.files[0];
     if (!file) {
@@ -37,7 +45,7 @@ if (profileImage && photoInput) {
   });
 }
 
-if (profileImage && photoReset) {
+if (isEditMode && profileImage && photoReset) {
   photoReset.addEventListener("click", () => {
     profileImage.src = profileImage.dataset.defaultSrc || profileImage.src;
     window.localStorage.removeItem(profilePhotoStorageKey);
@@ -46,6 +54,24 @@ if (profileImage && photoReset) {
       photoInput.value = "";
     }
   });
+}
+
+const ga4MeasurementId =
+  window.PORTFOLIO_CONFIG?.analytics?.ga4MeasurementId || "";
+
+if (ga4MeasurementId) {
+  const analyticsScript = document.createElement("script");
+  analyticsScript.async = true;
+  analyticsScript.src =
+    "https://www.googletagmanager.com/gtag/js?id=" + ga4MeasurementId;
+  document.head.appendChild(analyticsScript);
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag("js", new Date());
+  window.gtag("config", ga4MeasurementId);
 }
 
 const revealItems = document.querySelectorAll(".reveal");
