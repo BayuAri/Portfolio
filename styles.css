@@ -388,6 +388,7 @@ ul {
 .case-study-card,
 .service-card,
 .experience-card,
+.github-card,
 .device-panel,
 .education-panel {
   padding: 28px;
@@ -419,6 +420,58 @@ ul {
 
 .tool-grid span {
   background: rgba(15, 79, 58, 0.05);
+}
+
+.github-activity-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+}
+
+.github-card {
+  background: var(--surface);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.github-card h3 {
+  font-size: 1.55rem;
+  margin: 0 0 12px;
+}
+
+.github-card p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.github-card-visual {
+  display: grid;
+  gap: 16px;
+}
+
+.github-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.github-image {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(27, 39, 31, 0.08);
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.github-overview-image {
+  min-height: 210px;
+}
+
+.github-graph-image {
+  min-height: 260px;
 }
 
 .case-study-grid {
@@ -630,6 +683,7 @@ ul {
   .contact-panel,
   .achievement-grid,
   .card-grid,
+  .github-activity-grid,
   .experience-list,
   .device-layout,
   .case-study-grid {
@@ -668,6 +722,7 @@ ul {
   .contact-panel,
   .achievement-grid,
   .card-grid,
+  .github-activity-grid,
   .experience-list,
   .device-layout,
   .stat-grid,
