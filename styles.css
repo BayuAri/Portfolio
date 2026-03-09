@@ -423,6 +423,7 @@ ul {
 }
 
 .github-activity-grid {
+  align-items: start;
   display: grid;
   gap: 18px;
   grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
