@@ -700,23 +700,35 @@ ul {
 }
 
 .contact-panel {
-  align-items: center;
+  align-items: start;
   background:
     radial-gradient(circle at top right, rgba(189, 123, 23, 0.2), transparent 25%),
     linear-gradient(135deg, rgba(16, 79, 56, 0.96), rgba(12, 59, 42, 0.94));
   color: #eef7ef;
-  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
   padding: 32px;
+}
+
+.contact-copy {
+  max-width: 44rem;
 }
 
 .contact-column {
   display: grid;
+  align-self: stretch;
   gap: 16px;
 }
 
-.contact-caption {
-  margin: 0;
-  max-width: 36ch;
+.contact-cta-card {
+  background: rgba(7, 39, 27, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  display: grid;
+  gap: 18px;
+  min-height: 100%;
+  padding: 28px;
 }
 
 .contact-panel p,
@@ -733,6 +745,25 @@ ul {
   font-weight: 700;
 }
 
+.contact-kicker {
+  color: #f6d89d;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.contact-cta-copy {
+  margin: 0;
+  max-width: 34ch;
+}
+
+.contact-actions {
+  align-items: flex-start;
+  gap: 14px;
+}
+
 .contact-panel .button-secondary {
   border-color: rgba(255, 255, 255, 0.2);
   color: #eef7ef;
@@ -747,6 +778,16 @@ ul {
   background: rgba(255, 249, 241, 0.92);
   border-color: rgba(255, 255, 255, 0.18);
   color: #223126;
+}
+
+.contact-notes {
+  grid-column: 1 / -1;
+  justify-content: flex-start;
+  margin-top: 4px;
+}
+
+.contact-notes span {
+  white-space: nowrap;
 }
 
 .site-footer {
@@ -786,6 +827,10 @@ ul {
 
   .portrait-frame {
     aspect-ratio: 4 / 5;
+  }
+
+  .contact-notes {
+    flex-wrap: wrap;
   }
 }
 
@@ -831,12 +876,20 @@ ul {
     padding: 22px;
   }
 
+  .contact-cta-card {
+    padding: 22px;
+  }
+
   .case-study-card {
     padding: 24px;
   }
 
   .github-overview-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-notes span {
+    white-space: normal;
   }
 
   .hero-title,
