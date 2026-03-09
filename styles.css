@@ -736,15 +736,6 @@ ul {
   color: rgba(238, 247, 239, 0.82);
 }
 
-.contact-email {
-  margin: 0 0 16px;
-}
-
-.contact-email a {
-  color: #f6d89d;
-  font-weight: 700;
-}
-
 .contact-kicker {
   color: #f6d89d;
   font-size: 0.84rem;
