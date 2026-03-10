@@ -102,7 +102,7 @@ ul {
 }
 
 .section {
-  margin-bottom: 26px;
+  margin-bottom: 42px;
 }
 
 .hero,
@@ -135,7 +135,7 @@ ul {
 }
 
 .hero-copy {
-  padding: 42px;
+  padding: 48px;
 }
 
 .eyebrow,
@@ -170,7 +170,7 @@ ul {
   margin-bottom: 30px;
 }
 
-.hero h1,
+.hero-title,
 .section-heading h2,
 .split h2,
 .contact-panel h2 {
@@ -180,7 +180,7 @@ ul {
   margin: 0;
 }
 
-.hero h1 {
+.hero-title {
   font-size: clamp(3rem, 6vw, 5.8rem);
   max-width: 10ch;
 }
@@ -201,7 +201,7 @@ ul {
 .hero-text {
   font-size: 1.08rem;
   margin: 28px 0 0;
-  max-width: 62ch;
+  max-width: 36ch;
 }
 
 .hero-text-secondary {
@@ -256,7 +256,8 @@ ul {
 .mini-facts span,
 .skill-cloud span,
 .tool-grid span,
-.contact-notes span {
+.contact-notes span,
+.case-signals span {
   background: var(--surface-strong);
   border: 1px solid rgba(27, 39, 31, 0.08);
   border-radius: 16px;
@@ -369,7 +370,7 @@ ul {
 }
 
 .section-heading {
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .section-heading h2,
@@ -387,9 +388,10 @@ ul {
 .case-study-card,
 .service-card,
 .experience-card,
+.github-card,
 .device-panel,
 .education-panel {
-  padding: 24px;
+  padding: 28px;
 }
 
 .achievement-card-featured {
@@ -420,8 +422,167 @@ ul {
   background: rgba(15, 79, 58, 0.05);
 }
 
+.github-activity-grid {
+  align-items: start;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr);
+}
+
+.github-card {
+  background: var(--surface);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.github-card h3 {
+  font-size: 1.55rem;
+  margin: 0 0 12px;
+}
+
+.github-card p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.github-card-visual {
+  display: grid;
+  gap: 16px;
+}
+
+.github-live-panel {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(27, 39, 31, 0.08);
+  border-radius: 24px;
+  display: grid;
+  gap: 18px;
+  padding: 18px;
+}
+
+.github-overview-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.github-overview-grid article {
+  background: rgba(15, 79, 58, 0.05);
+  border-radius: 18px;
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+}
+
+.github-badge {
+  border-radius: 999px;
+  max-width: 100%;
+}
+
+.github-overview-grid span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.github-profile-summary strong {
+  color: var(--ink);
+  display: block;
+  font-size: 1.35rem;
+  margin-bottom: 2px;
+}
+
+.github-feed {
+  border-top: 1px solid rgba(27, 39, 31, 0.08);
+  padding-top: 18px;
+}
+
+.github-feed-title {
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.github-feed-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.github-feed-list li {
+  background: rgba(15, 79, 58, 0.04);
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+
+.github-feed-list strong,
+.github-feed-list span {
+  display: block;
+}
+
+.github-feed-list strong {
+  color: var(--ink);
+  font-size: 0.96rem;
+  margin-bottom: 4px;
+}
+
+.github-feed-list span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.github-feed-list a {
+  color: var(--accent-deep);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.github-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.github-image {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(27, 39, 31, 0.08);
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.github-overview-image {
+  min-height: 210px;
+}
+
+.github-graph-image {
+  min-height: 260px;
+  object-fit: contain;
+}
+
 .case-study-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.case-study-card {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)) padding-box,
+    var(--surface);
+  position: relative;
+}
+
+.case-study-card::before {
+  background: linear-gradient(90deg, rgba(23, 111, 81, 0.96), rgba(189, 123, 23, 0.82));
+  border-radius: 999px;
+  content: "";
+  display: block;
+  height: 4px;
+  margin-bottom: 18px;
+  width: 72px;
 }
 
 .case-study-head {
@@ -453,9 +614,32 @@ ul {
   width: 100%;
 }
 
+.case-study-card h3 {
+  font-size: 1.85rem;
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.case-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.case-signals span {
+  background: rgba(15, 79, 58, 0.06);
+  font-size: 0.82rem;
+  padding: 10px 12px;
+}
+
+.case-study-card > p {
+  max-width: 34ch;
+}
+
 .case-points {
   list-style: none;
-  margin-top: 14px;
+  margin-top: 18px;
 }
 
 .case-points li {
@@ -517,23 +701,35 @@ ul {
 }
 
 .contact-panel {
-  align-items: center;
+  align-items: start;
   background:
     radial-gradient(circle at top right, rgba(189, 123, 23, 0.2), transparent 25%),
     linear-gradient(135deg, rgba(16, 79, 56, 0.96), rgba(12, 59, 42, 0.94));
   color: #eef7ef;
-  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
   padding: 32px;
+}
+
+.contact-copy {
+  max-width: 44rem;
 }
 
 .contact-column {
   display: grid;
+  align-self: stretch;
   gap: 16px;
 }
 
-.contact-caption {
-  margin: 0;
-  max-width: 36ch;
+.contact-cta-card {
+  background: rgba(7, 39, 27, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  display: grid;
+  gap: 18px;
+  min-height: 100%;
+  padding: 28px;
 }
 
 .contact-panel p,
@@ -541,13 +737,23 @@ ul {
   color: rgba(238, 247, 239, 0.82);
 }
 
-.contact-email {
-  margin: 0 0 16px;
+.contact-kicker {
+  color: #f6d89d;
+  font-size: 0.84rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin: 0;
+  text-transform: uppercase;
 }
 
-.contact-email a {
-  color: #f6d89d;
-  font-weight: 700;
+.contact-cta-copy {
+  margin: 0;
+  max-width: 34ch;
+}
+
+.contact-actions {
+  align-items: flex-start;
+  gap: 14px;
 }
 
 .contact-panel .button-secondary {
@@ -564,6 +770,16 @@ ul {
   background: rgba(255, 249, 241, 0.92);
   border-color: rgba(255, 255, 255, 0.18);
   color: #223126;
+}
+
+.contact-notes {
+  grid-column: 1 / -1;
+  justify-content: flex-start;
+  margin-top: 4px;
+}
+
+.contact-notes span {
+  white-space: nowrap;
 }
 
 .site-footer {
@@ -589,6 +805,7 @@ ul {
   .contact-panel,
   .achievement-grid,
   .card-grid,
+  .github-activity-grid,
   .experience-list,
   .device-layout,
   .case-study-grid {
@@ -602,6 +819,10 @@ ul {
 
   .portrait-frame {
     aspect-ratio: 4 / 5;
+  }
+
+  .contact-notes {
+    flex-wrap: wrap;
   }
 }
 
@@ -627,6 +848,7 @@ ul {
   .contact-panel,
   .achievement-grid,
   .card-grid,
+  .github-activity-grid,
   .experience-list,
   .device-layout,
   .stat-grid,
@@ -639,13 +861,30 @@ ul {
   .achievement-card,
   .service-card,
   .experience-card,
+  .github-card,
   .device-panel,
   .education-panel,
   .contact-panel {
     padding: 22px;
   }
 
-  .hero h1,
+  .contact-cta-card {
+    padding: 22px;
+  }
+
+  .case-study-card {
+    padding: 24px;
+  }
+
+  .github-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-notes span {
+    white-space: normal;
+  }
+
+  .hero-title,
   .section-heading h2,
   .split h2,
   .contact-panel h2 {
