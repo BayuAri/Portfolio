@@ -396,6 +396,7 @@ ul {
 
 .achievement-card-featured {
   grid-row: span 2;
+  align-self: start;
 }
 
 .proof-label {
