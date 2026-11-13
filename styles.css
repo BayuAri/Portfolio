@@ -609,7 +609,6 @@ main {
 .service-card,
 .report,
 .device-panel,
-.education-panel,
 .github-card,
 .experience-card {
   background: var(--surface);
@@ -966,30 +965,6 @@ main {
   padding: 2px 7px;
 }
 
-/* ---------- Education ---------- */
-
-.education-panel {
-  display: grid;
-  gap: 20px 40px;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
-  padding: 28px;
-}
-
-.education-school {
-  color: var(--muted);
-  font-family: var(--mono);
-  font-size: 0.85rem;
-  margin-top: 8px;
-}
-
-.education-panel > p {
-  color: var(--ink-soft);
-}
-
-.education-panel .profile-badges {
-  grid-column: 1 / -1;
-}
-
 /* ---------- GitHub ---------- */
 
 .github-activity-grid {
@@ -1233,8 +1208,7 @@ main {
   .hero,
   .split,
   .contact-panel,
-  .github-activity-grid,
-  .education-panel {
+  .github-activity-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -1323,8 +1297,7 @@ main {
   .test-case,
   .service-card,
   .report,
-  .github-card,
-  .education-panel {
+  .github-card {
     padding: 18px;
   }
 
