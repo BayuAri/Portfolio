@@ -1694,6 +1694,12 @@ main {
   margin-top: 4px;
 }
 
+.cs-note {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-top: 16px;
+}
+
 .cs-cta {
   display: grid;
   gap: 20px;
