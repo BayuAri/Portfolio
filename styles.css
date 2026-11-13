@@ -1428,6 +1428,72 @@ main {
   padding: 6px 14px;
 }
 
+.testimonial-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+}
+
+.testimonial {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--pass);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  min-width: 0;
+  padding: 22px;
+}
+
+.testimonial-featured {
+  background:
+    linear-gradient(135deg, rgba(63, 185, 80, 0.1), transparent 60%),
+    var(--surface);
+  grid-row: span 2;
+}
+
+.testimonial-head {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.testimonial blockquote {
+  color: var(--ink-soft);
+  display: grid;
+  font-size: 0.95rem;
+  gap: 12px;
+  margin: 0;
+}
+
+.testimonial blockquote p:first-child::before {
+  color: var(--pass-ink);
+  content: "\201C";
+  font-size: 1.6em;
+  line-height: 0;
+  margin-right: 4px;
+  vertical-align: -0.3em;
+}
+
+.testimonial mark {
+  background: var(--pass-soft);
+  border-radius: 3px;
+  color: var(--ink);
+  padding: 0 2px;
+}
+
+.testimonial figcaption {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  margin-top: auto;
+  padding-top: 12px;
+}
+
 .cs-coverage {
   margin-top: 16px;
 }
@@ -1485,6 +1551,14 @@ main {
 
   .cs-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonial-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .testimonial-featured {
+    grid-row: auto;
   }
 }
 
