@@ -586,6 +586,7 @@ main {
 /* ---------- About ---------- */
 
 .split {
+  align-items: start;
   display: grid;
   gap: 48px;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
@@ -595,6 +596,25 @@ main {
   color: var(--ink-soft);
   display: grid;
   gap: 18px;
+}
+
+.timezone-note {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--info);
+  border-radius: var(--radius);
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
+.timezone-note .report-label {
+  color: var(--info);
+  margin: 0;
+}
+
+.timezone-note > p:not(.report-label) {
+  color: var(--ink-soft);
 }
 
 /* ---------- Achievements (test cases) ---------- */
@@ -750,12 +770,6 @@ main {
 .report > p:not(.report-label) {
   color: var(--muted);
   font-size: 0.95rem;
-}
-
-.inline-link {
-  color: var(--info);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .report-label {
