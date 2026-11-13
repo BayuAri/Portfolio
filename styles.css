@@ -1384,7 +1384,7 @@ main {
 .app-grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .app-tile {
@@ -1564,6 +1564,10 @@ main {
 }
 
 @media (max-width: 720px) {
+  .app-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .cs-hero {
     padding: 28px 0 48px;
   }
