@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Case study: nearly ten years of weekly release QA for Swift Medical's AI-powered digital wound care apps, Swift Skin and Wound and Skin & Wound 2."
+  >
+  <meta name="theme-color" content="#0b0f14">
+  <title>Swift Medical Case Study | Bayu Ari</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <script src="../config.js"></script>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="../index.html"><span class="brand-dot" aria-hidden="true"></span>bayu.ari<span class="brand-path">~/qa/case-studies</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../index.html#case-studies">All Case Studies</a>
+        <a href="#client">Client</a>
+        <a href="#product">Product</a>
+        <a href="#apps">Apps</a>
+        <a href="#role">My Role</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top" class="case-page">
+      <section class="cs-hero">
+        <a class="cs-back" href="../index.html#case-studies">← Back to case studies</a>
+        <div class="cs-hero-grid">
+          <div class="cs-hero-copy">
+            <div class="chip-row">
+              <span class="chip chip-pass">Shipped</span>
+              <span class="chip chip-info">Healthcare · Digital wound care</span>
+            </div>
+            <h1>Nearly a decade of weekly release QA for an AI wound care platform</h1>
+            <p class="cs-lede">
+              From its early days in Toronto to the launch of Skin &amp; Wound 2, I tested Swift Medical's
+              mobile apps every week. Clinicians in thousands of care facilities use these apps to photograph,
+              measure and track wounds, so a regression in a release reaches patient care directly.
+            </p>
+          </div>
+          <article class="report cs-summary">
+            <div class="report-head">
+              <span class="case-id">QA-SWIFT</span>
+              <img class="cs-summary-logo" src="../assets/images/clients/swift-skin-wound-2.jpg" alt="Skin &amp; Wound 2 app icon" width="40" height="40">
+            </div>
+            <dl class="report-fields">
+              <div><dt>Client</dt><dd><a class="cs-link" href="https://swiftmedical.com/" target="_blank" rel="noreferrer">Swift Medical Inc.</a></dd></div>
+              <div><dt>HQ</dt><dd>Toronto, Ontario, Canada</dd></div>
+              <div><dt>Role</dt><dd>Senior QA Engineer</dd></div>
+              <div><dt>Period</dt><dd>Sep 2015 – Mar 2025 (~9.5 years)</dd></div>
+              <div><dt>Platform</dt><dd>iOS, Android</dd></div>
+              <div><dt>Cadence</dt><dd>Weekly builds</dd></div>
+              <div><dt>Tracker</dt><dd>Jira, TestRail → Azure DevOps</dd></div>
+            </dl>
+          </article>
+        </div>
+        <ul class="cs-stats" aria-label="Swift Medical at a glance">
+          <li><strong>4,800+</strong><span>healthcare facilities<sup><a href="#src-3">3</a></sup></span></li>
+          <li><strong>21,000+</strong><span>clinicians in 2024<sup><a href="#src-3">3</a></sup></span></li>
+          <li><strong>32M+</strong><span>wound images in its database<sup><a href="#src-4">4</a></sup></span></li>
+          <li><strong>~9.5 yrs</strong><span>of continuous QA</span></li>
+        </ul>
+      </section>
+
+      <section id="client" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">The Client</p>
+          <h2>A Toronto startup that turned the smartphone camera into a clinical tool</h2>
+        </div>
+        <div class="cs-two-col">
+          <div class="cs-prose">
+            <p>
+              Swift Medical builds digital wound care software. Co-founder Carlo Perez is an engineer who had
+              worked in 3D graphics at AMD. He first set out to build a broader computer-vision telemedicine
+              app. Then his dermatologist co-founder, Dr. Sheila Wang, took him to a wound clinic, and the
+              company switched its focus to wound care.<sup><a href="#src-1">1</a></sup>
+            </p>
+            <p>
+              The problem it addresses is a common one. Nurses traditionally measure wounds by hand, with
+              rulers and estimates, so measurements vary from one clinician to the next. That makes healing hard
+              to track. Swift replaced the ruler with a phone camera and software, which gives home health
+              agencies, nursing homes and hospitals consistent, comparable data over time.<sup><a href="#src-1">1</a></sup>
+            </p>
+            <p>
+              I joined in September 2015, while the product was still young, and stayed through several funding
+              rounds and two generations of the app. Over that time, Swift grew from an early-stage startup into
+              a platform used by thousands of facilities.
+            </p>
+          </div>
+          <ol class="timeline" aria-label="Swift Medical timeline">
+            <li>
+              <span class="timeline-date">Sep 2015</span>
+              <p><strong>I join as QA.</strong> Weekly build testing, with Jira and TestRail.</p>
+            </li>
+            <li>
+              <span class="timeline-date">Sep 2018</span>
+              <p><strong>Swift Skin and Wound</strong> launches on the App Store as an enterprise wound care app.<sup><a href="#src-5">5</a></sup></p>
+            </li>
+            <li>
+              <span class="timeline-date">Jul 2021</span>
+              <p><strong>US$35M Series B</strong>, led by Virgo Investment Group.<sup><a href="#src-1">1</a>,<a href="#src-2">2</a></sup></p>
+            </li>
+            <li>
+              <span class="timeline-date">Jan 2024</span>
+              <p><strong>$8M round</strong>, co-led by BDC Capital's Women in Technology Venture Fund and Virgo.<sup><a href="#src-6">6</a></sup></p>
+            </li>
+            <li>
+              <span class="timeline-date">Oct 2024</span>
+              <p><strong>Skin &amp; Wound 2 released</strong>: the next-generation, AI-based platform.<sup><a href="#src-3">3</a></sup></p>
+            </li>
+            <li class="timeline-end">
+              <span class="timeline-date">Mar 2025</span>
+              <p><strong>Engagement completes</strong> after about 9.5 years of continuous release support.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="product" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">The Product &amp; Tech</p>
+          <h2>Computer vision and AI in the hands of bedside clinicians</h2>
+        </div>
+        <div class="card-grid">
+          <article class="service-card">
+            <p class="suite-label">Capture</p>
+            <h3>3D wound imaging from a phone</h3>
+            <p>
+              The app uses the smartphone camera to build a 3D model of a wound. It then measures the wound's size
+              and characteristics automatically, so nobody needs a ruler or has to estimate by eye.<sup><a href="#src-1">1</a></sup>
+            </p>
+          </article>
+          <article class="service-card">
+            <p class="suite-label">Analyse</p>
+            <h3>AI trained on 32M+ wound images</h3>
+            <p>
+              Its tissue analytics draw on what Swift calls the world's largest wound imaging database. Skin &amp; Wound 2
+              adds patented AI technology, which Swift says measures with submillimeter accuracy.<sup><a href="#src-3">3</a>,<a href="#src-4">4</a></sup>
+            </p>
+          </article>
+          <article class="service-card">
+            <p class="suite-label">Integrate</p>
+            <h3>Fits into existing care systems</h3>
+            <p>
+              Skin &amp; Wound 2 is built on the FHIR interoperability standard and integrates closely with EHRs such as
+              Homecare Homebase. Organizations license it as an enterprise platform.<sup><a href="#src-3">3</a>,<a href="#src-5">5</a></sup>
+            </p>
+          </article>
+        </div>
+        <div class="case-signals cs-tags" aria-label="Product family">
+          <span>Swift Skin &amp; Wound™</span>
+          <span>Swift Ray®</span>
+          <span>Swift Portal</span>
+          <span>Swift Academy</span>
+          <span>FHIR</span>
+          <span>iOS</span>
+          <span>Android</span>
+        </div>
+      </section>
+
+      <section id="apps" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Apps I Tested</p>
+          <h2>Two generations of the clinical app</h2>
+        </div>
+        <div class="app-grid">
+          <article class="app-tile">
+            <img class="app-icon" src="../assets/images/clients/swift-skin-wound.jpg" alt="Swift Skin and Wound app icon" width="72" height="72" loading="lazy">
+            <div class="app-body">
+              <p class="case-id">Gen 1 · 2018</p>
+              <h3>Swift Skin and Wound</h3>
+              <p>
+                The original enterprise app. It gives healthcare organizations full visibility of wound care across
+                their patient population, with dashboards for administrators and specialists.<sup><a href="#src-5">5</a></sup>
+              </p>
+              <div class="app-links">
+                <a class="button button-secondary" href="https://apps.apple.com/us/app/id1410310051" target="_blank" rel="noreferrer">App Store</a>
+                <a class="button button-secondary" href="https://play.google.com/store/apps/details?id=io.swiftmedical.android.swiftapp" target="_blank" rel="noreferrer">Google Play</a>
+              </div>
+            </div>
+          </article>
+          <article class="app-tile">
+            <img class="app-icon" src="../assets/images/clients/swift-skin-wound-2.jpg" alt="Skin &amp; Wound 2 app icon" width="72" height="72" loading="lazy">
+            <div class="app-body">
+              <p class="case-id">Gen 2 · 2024</p>
+              <h3>Skin &amp; Wound 2</h3>
+              <p>
+                The AI-driven successor, covering every step from the point of care to administration and analysis.
+                It has been used for more than 50 million patient assessments.<sup><a href="#src-3">3</a></sup>
+              </p>
+              <div class="app-links">
+                <a class="button button-secondary" href="https://apps.apple.com/us/app/id6472727985" target="_blank" rel="noreferrer">App Store</a>
+                <a class="button button-secondary" href="https://play.google.com/store/apps/details?id=com.swiftmedical.apollo" target="_blank" rel="noreferrer">Google Play</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="cs-note">Both apps need an enterprise license from the clinician's healthcare organization.</p>
+      </section>
+
+      <section id="role" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">My Role</p>
+          <h2>Keeping weekly releases safe for clinical users</h2>
+        </div>
+        <div class="cs-two-col">
+          <div class="cs-prose">
+            <p>
+              Every week a new build had to be tested before it reached clinicians. I was responsible for that
+              release confidence. I ran manual and regression testing on each build, caught regressions before
+              they shipped, and reported defects in a way developers could act on quickly.
+            </p>
+            <p>
+              The tooling changed as the company grew. Early on, test cases lived in TestRail and defects in
+              Jira. Later the team moved everything to Azure DevOps. I migrated with it and kept the regression
+              coverage running throughout, with no gap in release support.
+            </p>
+            <p>
+              Testing a clinical imaging app differs from testing a typical consumer app. Camera capture,
+              measurement and patient records all have to behave the same way on every iOS and Android device the
+              clinicians carry. Each release also has to keep their workflow intact.
+            </p>
+          </div>
+          <article class="report">
+            <div class="report-head">
+              <span class="case-id">COVERAGE</span>
+              <span class="chip chip-pass">Weekly</span>
+            </div>
+            <ol class="case-points">
+              <li>Manual and regression testing of every weekly build</li>
+              <li>Cross-device checks of camera capture and wound measurement flows on iOS and Android</li>
+              <li>Test case design and maintenance in TestRail, later Azure DevOps</li>
+              <li>Defect reporting, triage support and fix verification in Jira, later Azure DevOps</li>
+              <li>Regression coverage carried through the move from Gen 1 to Skin &amp; Wound 2</li>
+              <li>Continuity through the Jira/TestRail → Azure DevOps process migration</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Why It Matters</p>
+          <h2>Long-term trust in a field where accuracy matters</h2>
+        </div>
+        <div class="cs-prose cs-prose-wide">
+          <p>
+            Few QA engagements last close to ten years, and fewer still in healthcare. This one covered Swift's
+            growth from startup to an AI platform used in more than 4,800 facilities. It covered two generations
+            of the app and a complete change of tooling, with the same QA partner keeping every weekly release in
+            check throughout.
+          </p>
+        </div>
+      </section>
+
+      <section id="sources" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Sources</p>
+          <h2>References</h2>
+        </div>
+        <ol class="cs-sources">
+          <li id="src-1"><a href="https://medcitynews.com/2021/07/startup-turns-smartphone-camera-to-wound-care/" target="_blank" rel="noreferrer">MedCity News: "Startup turns smartphone camera to wound care" (Jul 2021)</a></li>
+          <li id="src-2"><a href="https://www.torys.com/work/2021/07/swift-medical-raises-us%2435-million-series-b-to-transform-wound-care-delivery-with-ai" target="_blank" rel="noreferrer">Torys LLP: Swift Medical raises US$35 million Series B (Jul 2021)</a></li>
+          <li id="src-3"><a href="https://swiftmedical.com/introducing-skin-and-wound-2/" target="_blank" rel="noreferrer">Swift Medical: "The Next Generation of AI Based Digital Wound Care Released: Skin &amp; Wound 2" (Oct 2024)</a></li>
+          <li id="src-4"><a href="https://swiftmedical.com/" target="_blank" rel="noreferrer">Swift Medical: official website</a></li>
+          <li id="src-5"><a href="https://apps.apple.com/us/app/id1410310051" target="_blank" rel="noreferrer">App Store: Swift Skin and Wound listing</a></li>
+          <li id="src-6"><a href="https://pulse2.com/swift-medical-8-million-funding/" target="_blank" rel="noreferrer">Pulse 2.0: "Swift Medical: $8 Million Raised To Advance AI-Based Wound Care Platform" (Jan 2024)</a></li>
+        </ol>
+        <p class="cs-note">App names, icons and trademarks belong to Swift Medical Inc. They appear here only to describe my work on these products.</p>
+      </section>
+
+      <section id="contact" class="section cs-cta reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Need the same release confidence for your product?</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="https://www.upwork.com/freelancers/~0150bbcc316b3fb998" target="_blank" rel="noreferrer">Hire on Upwork</a>
+          <a class="button button-secondary" href="https://www.linkedin.com/in/bayuari/" target="_blank" rel="noreferrer">View LinkedIn</a>
+          <a class="button button-secondary" href="mailto:sticker_inc@yahoo.com?subject=QA%20Inquiry" data-email="sticker_inc@yahoo.com" title="sticker_inc@yahoo.com">Email Inquiry</a>
+          <a class="button button-secondary" href="../index.html#case-studies">← All case studies</a>
+        </div>
+        <div class="email-options" data-email-options hidden>
+          <span>Write in:</span>
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sticker_inc@yahoo.com&amp;su=QA%20Inquiry" target="_blank" rel="noreferrer">Gmail</a>
+          <a href="https://outlook.live.com/mail/0/deeplink/compose?to=sticker_inc@yahoo.com&amp;subject=QA%20Inquiry" target="_blank" rel="noreferrer">Outlook</a>
+          <a href="https://compose.mail.yahoo.com/?to=sticker_inc@yahoo.com&amp;subject=QA%20Inquiry" target="_blank" rel="noreferrer">Yahoo</a>
+          <a href="mailto:sticker_inc@yahoo.com?subject=QA%20Inquiry">Mail app</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Bayu Ari · Senior Manual QA Consultant · Indonesia</p>
+      <p><span class="pass-text">●</span> build passing · © <span id="year"></span></p>
+    </footer>
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
