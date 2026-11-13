@@ -757,6 +757,29 @@ ul {
   gap: 14px;
 }
 
+.email-options {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.92rem;
+  gap: 8px 16px;
+}
+
+.email-options[hidden] {
+  display: none;
+}
+
+.email-options span {
+  color: rgba(238, 247, 239, 0.72);
+}
+
+.email-options a {
+  color: #f6d89d;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .contact-panel .button-secondary {
   border-color: rgba(255, 255, 255, 0.2);
   color: #eef7ef;

@@ -138,7 +138,8 @@ if ("IntersectionObserver" in window) {
 
 // mailto: depends on the visitor's mail handler, which is often missing or
 // broken (e.g. a webmail handler that times out). So the first click always
-// reveals and copies the address on the button; clicking again opens mailto.
+// reveals and copies the address on the button and shows webmail compose
+// links (Gmail, Outlook, Yahoo); clicking the button again opens mailto.
 document.querySelectorAll("a[data-email]").forEach((link) => {
   const email = link.dataset.email;
 
@@ -148,6 +149,9 @@ document.querySelectorAll("a[data-email]").forEach((link) => {
     event.preventDefault();
     link.dataset.revealed = "true";
     link.textContent = email;
+
+    const options = document.querySelector("[data-email-options]");
+    if (options) options.hidden = false;
 
     if (navigator.clipboard) {
       navigator.clipboard
