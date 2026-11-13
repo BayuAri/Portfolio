@@ -163,3 +163,58 @@ document.querySelectorAll("a[data-email]").forEach((link) => {
     }
   });
 });
+
+// GA4 click events for the ways a visitor can get in touch. Runs alongside
+// the Email Inquiry handler above without changing it. Nothing is sent when
+// GA4 is not configured (window.gtag is only defined when it is).
+const clickEventFor = (link) => {
+  const href = link.getAttribute("href") || "";
+
+  if (link.matches("a[data-email]")) {
+    return link.dataset.revealed === "true" ? "click_email_mailto" : "click_email_inquiry";
+  }
+  if (link.closest("[data-email-options]")) return "click_email_compose";
+  if (href.includes("upwork.com")) return "click_upwork";
+  if (href.includes("linkedin.com")) return "click_linkedin";
+  if (href.includes("github.com")) return "click_github";
+  return "";
+};
+
+const sectionFor = (link) => {
+  const section = link.closest("section");
+  if (!section) return "header";
+  if (section.id) return section.id;
+  if (section.classList.contains("hero")) return "hero";
+  const eyebrow = section.querySelector(".eyebrow");
+  return eyebrow ? eyebrow.textContent.trim().toLowerCase().replace(/\s+/g, "-") : "page";
+};
+
+// Capture phase, so the Email Inquiry button is reported before its own
+// click handler marks it as revealed.
+document.addEventListener(
+  "click",
+  (event) => {
+    if (typeof window.gtag !== "function") return;
+
+    const link = event.target.closest("a");
+    if (!link) return;
+
+    const eventName = clickEventFor(link);
+    if (!eventName) return;
+
+    // The Email Inquiry button's text becomes the address once revealed,
+    // so it gets a fixed label instead of its text.
+    const params = {
+      link_location: sectionFor(link),
+      link_text: link.matches("a[data-email]")
+        ? "Email Inquiry"
+        : link.textContent.trim().slice(0, 100),
+    };
+    if (eventName === "click_email_compose") {
+      params.email_provider = link.textContent.trim();
+    }
+
+    window.gtag("event", eventName, params);
+  },
+  true
+);

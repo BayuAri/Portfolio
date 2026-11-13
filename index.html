@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta
     name="description"
-    content="Bayu Ari is a Senior Manual QA Consultant helping companies ship stable mobile and web products through manual QA, regression testing, and release-focused support."
+    content="Bayu Ari is a Senior Manual QA Consultant helping companies ship stable mobile and web products through manual QA, regression testing, pull request validation, and release-focused support."
   >
+  <meta name="theme-color" content="#0b0f14">
   <title>Bayu Ari | Senior Manual QA Consultant</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
   <script src="config.js"></script>
@@ -20,7 +21,7 @@
 <body>
   <div class="page-shell">
     <header class="site-header">
-      <a class="brand" href="#top">Bayu Ari</a>
+      <a class="brand" href="#top"><span class="brand-dot" aria-hidden="true"></span>bayu.ari<span class="brand-path">~/qa</span></a>
       <nav class="site-nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#achievements">Achievements</a>
@@ -32,11 +33,15 @@
     </header>
 
     <main id="top">
-      <section class="hero section reveal">
+      <section class="hero">
         <div class="hero-copy">
-          <h1 class="hero-role">Senior Manual QA Consultant</h1>
-          <p class="eyebrow">Top Rated Plus on Upwork</p>
-          <h2 class="hero-title">Helping companies ship stable mobile and web products with confidence.</h2>
+          <div class="chip-row">
+            <span class="chip chip-pass"><span class="chip-dot" aria-hidden="true"></span>Available · 30–45 hrs/week</span>
+            <span class="chip chip-info">Top Rated Plus on Upwork</span>
+          </div>
+          <h1 class="hero-name">Bayu Ari</h1>
+          <p class="hero-role">Senior Manual QA Consultant <span>iOS · Android · Web</span></p>
+          <p class="hero-title">The most valuable bugs are the ones your customers never see.</p>
           <p class="hero-text">
             I help companies release products with confidence. My work focuses on manual QA for iOS, Android,
             and web applications, making sure features behave as expected, critical flows stay stable, and
@@ -51,45 +56,54 @@
             <a class="button button-primary" href="https://www.upwork.com/freelancers/~0150bbcc316b3fb998" target="_blank" rel="noreferrer">View Upwork Profile</a>
             <a class="button button-secondary" href="#achievements">See Achievements</a>
           </div>
-          <ul class="hero-highlights" aria-label="Key strengths">
+          <ul class="checklist hero-highlights" aria-label="Key strengths">
             <li>Manual QA for iOS, Android, and web applications</li>
             <li>Regression testing, release validation, and critical user-flow coverage</li>
+            <li>Pull request validation in GitHub-based and AI-assisted development workflows</li>
             <li>Clear bug documentation that helps teams move faster on fixes</li>
           </ul>
         </div>
 
-        <aside class="hero-card">
-          <div class="portrait-frame">
-            <img
-              id="profile-image"
-              src="assets/images/profile-picture.jpeg"
-              data-default-src="assets/images/profile-picture.jpeg"
-              alt="Portrait of Bayu Ari"
-            >
+        <aside class="terminal hero-card" aria-label="QA profile summary">
+          <div class="terminal-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <p>qa-run — profile summary</p>
           </div>
-          <div class="hero-card-copy">
-            <p class="status-pill">Available for 30 to 45 hrs/week</p>
-            <div class="stat-grid">
-              <article>
-                <strong>26,000+</strong>
-                <span>Total hours delivered</span>
-              </article>
-              <article>
-                <strong>90</strong>
-                <span>Completed jobs</span>
-              </article>
+          <div class="terminal-body">
+            <div class="terminal-profile">
+              <div class="portrait-frame">
+                <img
+                  id="profile-image"
+                  src="assets/images/profile-picture.jpeg"
+                  data-default-src="assets/images/profile-picture.jpeg"
+                  alt="Portrait of Bayu Ari"
+                >
+              </div>
+              <div>
+                <strong>Bayu Ari</strong>
+                <span>Bekasi, Indonesia · UTC+07</span>
+              </div>
             </div>
+            <p class="terminal-cmd"><span class="prompt" aria-hidden="true">$</span> qa run --platforms ios,android,web</p>
+            <ul class="run-list stat-grid">
+              <li><span class="run-key">Total hours delivered</span><strong>27,800+</strong></li>
+              <li><span class="run-key">Completed jobs</span><strong>90</strong></li>
+              <li><span class="run-key">Client rating</span><strong>4.98 / 5</strong></li>
+              <li><span class="run-key">Hire-again rate</span><strong>94.6%</strong></li>
+              <li><span class="run-key">Serving since</span><strong>2013</strong></li>
+              <li><span class="run-key">Rate</span><strong>$66.67/hr</strong></li>
+            </ul>
             <div class="mini-facts">
-              <span>Rate:$59.99/hr</span>
               <span>English fluent · Indonesian native</span>
-              <span>Serving since 2013</span>
+              <span>Contract-to-hire open</span>
             </div>
+            <p class="run-summary"><span class="pass-text">6 passed</span> · 0 failed · 0 skipped</p>
           </div>
         </aside>
       </section>
 
       <section id="about" class="section split reveal">
-        <div>
+        <div class="section-heading">
           <p class="eyebrow">About</p>
           <h2>Quality should be built into the release process, not checked at the end.</h2>
         </div>
@@ -106,8 +120,29 @@
             clear communication, and documentation that helps engineering teams understand risk, fix faster, and
             release with more confidence.
           </p>
+          <p>
+            As teams adopt AI-assisted coding tools, QA becomes the final validation layer. Recent projects have
+            expanded my work into pull request validation, reproducing reported issues, verifying fixes, and
+            structured feedback loops between developers, coding agents, and product teams before changes are
+            merged or released.
+          </p>
+          <div class="timezone-note">
+            <p class="report-label">Working from UTC+07</p>
+            <p>
+              Being in a different timezone works in your favor. I work autonomously and asynchronously, so testing
+              keeps moving while your team is offline: a build handed over at the end of your day can come back
+              with test results and bug reports by your next morning. I also keep regular overlap hours with your
+              team for stand-ups, triage, and release coordination.
+            </p>
+            <ul class="checklist">
+              <li>Autonomous, async-first work with clear written handoffs</li>
+              <li>Testing runs during your off-hours for faster release cycles</li>
+              <li>Scheduled overlap hours for live coordination when it matters</li>
+            </ul>
+          </div>
           <div class="profile-badges">
             <span>Bekasi, Indonesia · UTC+07</span>
+            <span>Async-first · overlap hours for coordination</span>
             <span>Contract-to-hire open</span>
           </div>
         </div>
@@ -119,7 +154,11 @@
           <h2>Why clients trust me with release-critical QA work</h2>
         </div>
         <div class="achievement-grid">
-          <article class="achievement-card achievement-card-featured">
+          <article class="test-case achievement-card achievement-card-featured">
+            <div class="test-case-head">
+              <span class="case-id">TC-01</span>
+              <span class="chip chip-pass">Pass</span>
+            </div>
             <p class="proof-label">Upwork Standing</p>
             <h3>Top Rated Plus, a level earned by freelancers in Upwork's top 3%</h3>
             <p>
@@ -128,22 +167,38 @@
               support they can trust close to release.
             </p>
           </article>
-          <article class="achievement-card">
+          <article class="test-case achievement-card">
+            <div class="test-case-head">
+              <span class="case-id">TC-02</span>
+              <span class="chip chip-pass">Pass</span>
+            </div>
             <p class="proof-label">Client Retention</p>
             <h3>94.6% hire-again rate</h3>
             <p>Clients do not come back because of a polished profile. They come back when the work is dependable, communication is clear, and releases feel safer with the same QA partner involved.</p>
           </article>
-          <article class="achievement-card">
+          <article class="test-case achievement-card">
+            <div class="test-case-head">
+              <span class="case-id">TC-03</span>
+              <span class="chip chip-pass">Pass</span>
+            </div>
             <p class="proof-label">Production Experience</p>
-            <h3>26,000+ hours across 90 jobs</h3>
+            <h3>27,800+ hours across 90 jobs</h3>
             <p>That amount of hands-on QA work means repeated exposure to real product cycles, weekly releases, regressions, retesting, and the pressure that comes with shipping to live users.</p>
           </article>
-          <article class="achievement-card">
+          <article class="test-case achievement-card">
+            <div class="test-case-head">
+              <span class="case-id">TC-04</span>
+              <span class="chip chip-pass">Pass</span>
+            </div>
             <p class="proof-label">Long-Term Credibility</p>
             <h3>Serving clients since 2013</h3>
             <p>More than a decade of continuous freelance work shows staying power, adaptability, and the ability to keep delivering across different products, teams, and QA processes.</p>
           </article>
-          <article class="achievement-card">
+          <article class="test-case achievement-card">
+            <div class="test-case-head">
+              <span class="case-id">TC-05</span>
+              <span class="chip chip-pass">Pass</span>
+            </div>
             <p class="proof-label">Client Confidence</p>
             <h3>4.98 rating from 77 feedbacks</h3>
             <p>This points to more than technical testing ability. It shows consistency, professionalism, and a working style that clients trust over the long run.</p>
@@ -158,18 +213,32 @@
         </div>
         <div class="card-grid">
           <article class="service-card">
+            <p class="suite-label">suite/release</p>
             <h3>Release Preparation</h3>
             <p>Full regression testing before launch, validation of critical user journeys, and clear release reporting so stakeholders know what is ready and what still needs attention.</p>
           </article>
           <article class="service-card">
+            <p class="suite-label">suite/ongoing</p>
             <h3>Ongoing QA Support</h3>
             <p>Weekly or sprint-based testing cycles, structured test case maintenance, exploratory testing, and disciplined retesting after bug fixes.</p>
           </article>
           <article class="service-card">
+            <p class="suite-label">suite/product</p>
             <h3>Product-Focused Testing</h3>
             <p>Functional, usability, and edge-case testing that helps uncover logical gaps early and turns findings into bug reports the team can act on quickly.</p>
           </article>
           <article class="service-card">
+            <p class="suite-label">suite/pull-requests</p>
+            <h3>Pull Request Validation</h3>
+            <p>Testing changes inside GitHub-based workflows before they merge: reproducing reported issues, verifying fixes, reviewing implementation outcomes, and leaving structured feedback on the PR.</p>
+          </article>
+          <article class="service-card">
+            <p class="suite-label">suite/ai-assisted</p>
+            <h3>AI-Assisted Development Validation</h3>
+            <p>A human validation layer for teams shipping with coding agents: QA session orchestration, agent-assisted workflow checks, and clear feedback loops between developers, agents, and product.</p>
+          </article>
+          <article class="service-card">
+            <p class="suite-label">suite/process</p>
             <h3>How I Work</h3>
             <p>Detail-oriented but practical, focused on business impact instead of only defect counts, and comfortable collaborating with remote teams in active release cycles.</p>
           </article>
@@ -182,12 +251,49 @@
           <h2>Selected QA work from long-term product engagements</h2>
         </div>
         <div class="case-study-grid">
-          <article class="case-study-card">
-            <div class="case-study-head">
-              <p>Swift Medical Inc</p>
-              <span>Healthcare product QA</span>
+          <article class="report case-study-card">
+            <div class="report-head case-study-head">
+              <span class="case-id">QA-EM</span>
+              <span class="chip chip-info">Active</span>
+            </div>
+            <h3>Validated AI-assisted development on a cross-platform knowledge app</h3>
+            <dl class="report-fields">
+              <div><dt>Client</dt><dd>EM (Cybersemics)</dd></div>
+              <div><dt>Domain</dt><dd>Knowledge-management app</dd></div>
+              <div><dt>Platform</dt><dd>Web, iOS, Android (Capacitor)</dd></div>
+              <div><dt>Tracker</dt><dd>GitHub Issues and PRs</dd></div>
+              <div><dt>Period</dt><dd>Dec 2025 – Present</dd></div>
+            </dl>
+            <div class="case-signals" aria-label="EM scope">
+              <span>PR validation</span>
+              <span>AI-generated fix validation</span>
+              <span>Real devices and BrowserStack</span>
+            </div>
+            <p>
+              My role grew from testing finished features to working inside the development cycle: investigating
+              behavior, reproducing complex defects, and validating pull requests, including fixes written with AI
+              coding agents, against how the product actually behaves.
+            </p>
+            <p class="report-label">Coverage</p>
+            <ol class="case-points">
+              <li>Exploratory and edge-case testing with evidence-backed bug reports</li>
+              <li>PR and AI-generated fix validation against the original reproduction</li>
+              <li>Mobile, WebKit, and touch-interaction investigation on real devices</li>
+            </ol>
+          </article>
+          <article class="report case-study-card">
+            <div class="report-head case-study-head">
+              <span class="case-id">QA-SWIFT</span>
+              <span class="chip chip-pass">Shipped</span>
             </div>
             <h3>Maintained weekly release confidence over nearly a decade</h3>
+            <dl class="report-fields">
+              <div><dt>Client</dt><dd>Swift Medical Inc</dd></div>
+              <div><dt>Domain</dt><dd>Healthcare product QA</dd></div>
+              <div><dt>Cadence</dt><dd>Weekly builds</dd></div>
+              <div><dt>Tracker</dt><dd>Jira, TestRail → Azure DevOps</dd></div>
+              <div><dt>Period</dt><dd>Sep 2015 – Mar 2025</dd></div>
+            </dl>
             <div class="case-signals" aria-label="Swift Medical scope">
               <span>Weekly release QA</span>
               <span>Jira to Azure DevOps</span>
@@ -200,18 +306,26 @@
               experience strengthened both my QA discipline and my ability to stay effective through process and
               tooling changes.
             </p>
-            <ul class="case-points">
+            <p class="report-label">Coverage</p>
+            <ol class="case-points">
               <li>Manual and regression testing for weekly updated builds</li>
               <li>Defect tracking in Jira, later Azure DevOps</li>
               <li>TestRail-based collaboration before process migration</li>
-            </ul>
+            </ol>
           </article>
-          <article class="case-study-card">
-            <div class="case-study-head">
-              <p>Evolve Global Inc</p>
-              <span>Consumer mobile products</span>
+          <article class="report case-study-card">
+            <div class="report-head case-study-head">
+              <span class="case-id">QA-EVOLVE</span>
+              <span class="chip chip-info">Active</span>
             </div>
             <h3>Supported weekly releases for podcast and sleep-habit apps</h3>
+            <dl class="report-fields">
+              <div><dt>Client</dt><dd>Evolve Global Inc</dd></div>
+              <div><dt>Domain</dt><dd>Consumer mobile products</dd></div>
+              <div><dt>Platform</dt><dd>iOS, Android</dd></div>
+              <div><dt>Cadence</dt><dd>Weekly sprint releases</dd></div>
+              <div><dt>Period</dt><dd>May 2021 – Present</dd></div>
+            </dl>
             <div class="case-signals" aria-label="Evolve Global scope">
               <span>iOS and Android apps</span>
               <span>Weekly sprint releases</span>
@@ -221,18 +335,26 @@
               This work demonstrates current production relevance: weekly regression, exploratory testing, and
               direct collaboration with developers and stakeholders on apps where user experience matters.
             </p>
-            <ul class="case-points">
+            <p class="report-label">Coverage</p>
+            <ol class="case-points">
               <li>Weekly sprint-end regression before release</li>
               <li>Bug reporting, monitoring, and follow-through</li>
               <li>Regression case development and maintenance</li>
-            </ul>
+            </ol>
           </article>
-          <article class="case-study-card">
-            <div class="case-study-head">
-              <p>Showcase Workshop</p>
-              <span>Cross-platform coverage</span>
+          <article class="report case-study-card">
+            <div class="report-head case-study-head">
+              <span class="case-id">QA-SHOWCASE</span>
+              <span class="chip chip-pass">Shipped</span>
             </div>
             <h3>Validated one product across iPhone, iPad, Android, Chrome, and Windows</h3>
+            <dl class="report-fields">
+              <div><dt>Client</dt><dd>Showcase Workshop</dd></div>
+              <div><dt>Domain</dt><dd>Cross-platform coverage</dd></div>
+              <div><dt>Platform</dt><dd>iPhone, iPad, Android, Chrome, Windows</dd></div>
+              <div><dt>Tracker</dt><dd>GitHub (private repo)</dd></div>
+              <div><dt>Period</dt><dd>Jan 2015 – Jan 2025</dd></div>
+            </dl>
             <div class="case-signals" aria-label="Showcase Workshop scope">
               <span>Mobile and desktop coverage</span>
               <span>GitHub issue workflow</span>
@@ -242,11 +364,12 @@
               This is the clearest example of the ability to think across ecosystems instead of testing a single
               isolated app build. It shows cross-platform consistency and GitHub-centered issue workflows.
             </p>
-            <ul class="case-points">
+            <p class="report-label">Coverage</p>
+            <ol class="case-points">
               <li>Manual and regression testing across multiple platforms</li>
               <li>Bug tracking and monitoring inside GitHub</li>
               <li>Release-quality focus before builds reached users</li>
-            </ul>
+            </ol>
           </article>
         </div>
       </section>
@@ -260,17 +383,22 @@
           <span>Manual Testing</span>
           <span>End-to-End Testing</span>
           <span>Regression Testing</span>
+          <span>Exploratory Testing</span>
           <span>Black Box Testing</span>
           <span>Mobile App Testing</span>
-          <span>Bug Tracking &amp; Reports</span>
+          <span>Cross-Device Testing</span>
+          <span>WebKit &amp; Safari Testing</span>
           <span>Functional Testing</span>
+          <span>Feature &amp; Release Validation</span>
+          <span>Pull Request Validation</span>
+          <span>AI-Assisted Development Validation</span>
+          <span>Bug Investigation &amp; Reproduction</span>
+          <span>Bug Tracking &amp; Reports</span>
           <span>Test Case Design</span>
-          <span>GitHub</span>
-          <span>Jira</span>
-          <span>Azure DevOps</span>
-          <span>TestRail</span>
-          <span>Charles Proxy</span>
-          <span>Apple Xcode</span>
+          <span>Test Plans</span>
+          <span>Test Management</span>
+          <span>Code Review</span>
+          <span>Agile Product Development</span>
         </div>
       </section>
 
@@ -280,18 +408,23 @@
           <h2>Platforms and tools already used in production work</h2>
         </div>
         <div class="tool-grid">
-          <span>Jira</span>
-          <span>Azure DevOps</span>
           <span>GitHub</span>
+          <span>GitHub Copilot</span>
+          <span>Jira</span>
+          <span>Confluence</span>
+          <span>Azure DevOps</span>
+          <span>TestRail</span>
           <span>Charles Proxy</span>
+          <span>BrowserStack</span>
+          <span>Claude</span>
           <span>Visual Studio Code</span>
+          <span>Xcode</span>
           <span>Android Studio</span>
-          <span>Loom</span>
-          <span>Lightshot</span>
           <span>Trello</span>
           <span>Mixpanel</span>
-          <span>TestRail</span>
-          <span>Xcode</span>
+          <span>Loom</span>
+          <span>Lightshot</span>
+          <span>Miro</span>
         </div>
       </section>
 
@@ -303,10 +436,21 @@
         <div class="experience-list">
           <article class="experience-card">
             <div class="experience-meta">
+              <p>EM (Cybersemics) · San Francisco, USA</p>
+              <span>Dec 2025 – Present</span>
+            </div>
+            <h3>Senior QA Specialist, AI-Assisted QA <span class="chip chip-info">Active</span></h3>
+            <p>
+              Exploratory, regression, and cross-platform QA for a web, iOS, and Android knowledge-management app,
+              plus GitHub pull request validation and verification of fixes written with AI coding agents.
+            </p>
+          </article>
+          <article class="experience-card">
+            <div class="experience-meta">
               <p>Evolve Global Inc · San Francisco, USA</p>
               <span>May 2021 – Present</span>
             </div>
-            <h3>Manual QA Specialist</h3>
+            <h3>Manual QA Specialist <span class="chip chip-info">Active</span></h3>
             <p>
               Weekly regression testing, bug reporting, exploratory validation, and test case management for a
               podcast app and a sleep-management product with AI-assisted habit support.
@@ -356,6 +500,27 @@
               monitoring, and App Store preview-build validation.
             </p>
           </article>
+          <article class="experience-card">
+            <div class="experience-meta">
+              <p>Safety Culture · Garbutt, Australia</p>
+              <span>Aug 2014 – Feb 2017</span>
+            </div>
+            <h3>Software Quality Assurance</h3>
+            <p>
+              Part of a QA team running regression and manual testing on the iOS app before each App Store release.
+            </p>
+          </article>
+          <article class="experience-card">
+            <div class="experience-meta">
+              <p>Quiet Riots · London, UK</p>
+              <span>Feb 2014 – Jun 2015</span>
+            </div>
+            <h3>Database Expert and Manual Tester</h3>
+            <p>
+              Alpha testing for the iOS app and managing its Parse database, plus Trello and Pivotal Tracker
+              workflows and a team of contract translators for 20-language localization.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -366,56 +531,44 @@
         </div>
         <div class="device-layout">
           <article class="device-panel">
-            <h3>iPhone / iOS</h3>
+            <div class="device-head">
+              <h3>iPhone / iOS</h3>
+              <span class="chip chip-pass">8 online</span>
+            </div>
             <ul>
-              <li>iPod Touch 6th Gen · iOS 12.4.6</li>
-              <li>iPhone 6+ · iOS 12.4.6</li>
-              <li>iPhone 7+ · iOS 13.6</li>
-              <li>iPhone 12 Pro Max · iOS 26.2</li>
-              <li>iPhone 13 Mini · iOS 26.2</li>
-              <li>iPhone 14 Pro Max · iOS 26.3</li>
-              <li>iPhone 15 Pro · iOS 26.1</li>
-              <li>iPhone 16e · iOS 18.3.1</li>
+              <li><span>iPod Touch 6th Gen</span><code>iOS 12.4.6</code></li>
+              <li><span>iPhone 6+</span><code>iOS 12.4.6</code></li>
+              <li><span>iPhone 7+</span><code>iOS 13.6</code></li>
+              <li><span>iPhone 12 Pro Max</span><code>iOS 26.2</code></li>
+              <li><span>iPhone 13 Mini</span><code>iOS 18.7.8</code></li>
+              <li><span>iPhone 14 Pro Max</span><code>iOS 27.0.1</code></li>
+              <li><span>iPhone 15 Pro</span><code>iOS 26.6</code></li>
+              <li><span>iPhone 16e</span><code>iOS 26.6.2</code></li>
             </ul>
           </article>
           <article class="device-panel">
-            <h3>Android</h3>
+            <div class="device-head">
+              <h3>Android</h3>
+              <span class="chip chip-pass">5 online</span>
+            </div>
             <ul>
-              <li>Samsung S7 · Android 8.0</li>
-              <li>Samsung S9 · Android 10.0</li>
-              <li>Samsung Note 9 · Android 10.0</li>
-              <li>Samsung A51 · Android 11.0</li>
-              <li>Samsung A56 · Android 16.0</li>
+              <li><span>Samsung S7</span><code>Android 8.0</code></li>
+              <li><span>Samsung S9</span><code>Android 10.0</code></li>
+              <li><span>Samsung Note 9</span><code>Android 10.0</code></li>
+              <li><span>Samsung A51</span><code>Android 11.0</code></li>
+              <li><span>Samsung A56</span><code>Android 16.0</code></li>
             </ul>
           </article>
           <article class="device-panel">
-            <h3>Desktop</h3>
+            <div class="device-head">
+              <h3>Desktop</h3>
+              <span class="chip chip-pass">2 online</span>
+            </div>
             <ul>
-              <li>MacBook Pro 15&quot; · macOS 15.6.1 Sequoia</li>
-              <li>iMac M1 · macOS 15.6.1 Sequoia</li>
+              <li><span>MacBook Pro 15&quot;</span><code>macOS 15.7.7 Sequoia</code></li>
+              <li><span>iMac M1</span><code>macOS 27.0.1 Golden Gate</code></li>
             </ul>
           </article>
-        </div>
-      </section>
-
-      <section class="section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Education &amp; Communication</p>
-          <h2>Strength in documentation is part of the QA value</h2>
-        </div>
-        <div class="education-panel">
-          <div>
-            <h3>Bachelor of Education in English Language Teaching</h3>
-            <p>Sekolah Tinggi Bahasa Asing LIA Jakarta</p>
-          </div>
-          <p>
-            That background is useful in QA because good testing is only half the job. The other half is writing
-            bug reports, test cases, and release notes clearly enough that the team can act on them without guesswork.
-          </p>
-          <div class="profile-badges">
-            <span>English · Fluent</span>
-            <span>Indonesian · Native or Bilingual</span>
-          </div>
         </div>
       </section>
 
@@ -444,7 +597,7 @@
                 <article>
                   <img
                     class="github-badge"
-                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FBayuAri&query=%24.public_repos&label=Public%20repos&style=for-the-badge&color=176f51&labelColor=0f4f3a"
+                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FBayuAri&query=%24.public_repos&label=Public%20repos&style=for-the-badge&color=238636&labelColor=161b22"
                     alt="Public repository count for BayuAri on GitHub"
                     loading="lazy"
                   >
@@ -453,7 +606,7 @@
                 <article>
                   <img
                     class="github-badge"
-                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FBayuAri&query=%24.followers&label=Followers&style=for-the-badge&color=176f51&labelColor=0f4f3a"
+                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FBayuAri&query=%24.followers&label=Followers&style=for-the-badge&color=238636&labelColor=161b22"
                     alt="Follower count for BayuAri on GitHub"
                     loading="lazy"
                   >
@@ -462,7 +615,7 @@
                 <article>
                   <img
                     class="github-badge"
-                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FBayuAri&query=%24.following&label=Following&style=for-the-badge&color=176f51&labelColor=0f4f3a"
+                    src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FBayuAri&query=%24.following&label=Following&style=for-the-badge&color=238636&labelColor=161b22"
                     alt="Following count for BayuAri on GitHub"
                     loading="lazy"
                   >
@@ -480,13 +633,15 @@
                 </ul>
               </div>
             </div>
-            <img
-              class="github-image github-graph-image"
-              src="https://ghchart.rshah.org/176f51/BayuAri"
-              data-fallback-src="https://github-readme-activity-graph.vercel.app/graph?username=BayuAri&bg_color=f9f4eb&color=0f4f3a&line=176f51&point=bd7b17&area=true&hide_border=true"
-              alt="GitHub activity graph for BayuAri"
-              loading="lazy"
-            >
+            <div class="github-graph-frame">
+              <img
+                class="github-image github-graph-image"
+                src="https://ghchart.rshah.org/3fb950/BayuAri"
+                data-fallback-src="https://github-readme-activity-graph.vercel.app/graph?username=BayuAri&bg_color=11171e&color=e6edf3&line=3fb950&point=d29922&area=true&hide_border=true"
+                alt="GitHub activity graph for BayuAri"
+                loading="lazy"
+              >
+            </div>
           </article>
         </div>
       </section>
@@ -502,30 +657,37 @@
           </p>
         </div>
         <div class="contact-column">
-          <div class="contact-cta-card">
-            <p class="contact-kicker">Best next step</p>
-            <p class="contact-cta-copy">
-              Start with the channel that fits your hiring flow best. Upwork works well for active engagements,
-              while LinkedIn, GitHub, and email add more context before we talk.
-            </p>
-            <div class="contact-actions">
-              <a class="button button-primary" href="https://www.upwork.com/freelancers/~0150bbcc316b3fb998" target="_blank" rel="noreferrer">Hire on Upwork</a>
-              <a class="button button-secondary" href="https://www.linkedin.com/in/bayuari/" target="_blank" rel="noreferrer">View LinkedIn</a>
-              <a class="button button-secondary" href="https://github.com/BayuAri" target="_blank" rel="noreferrer">View GitHub</a>
-              <a class="button button-secondary" href="mailto:sticker_inc@yahoo.com?subject=QA%20Inquiry" data-email="sticker_inc@yahoo.com" title="sticker_inc@yahoo.com">Email Inquiry</a>
+          <div class="terminal contact-cta-card">
+            <div class="terminal-bar" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <p>next-step.sh</p>
             </div>
-            <div class="email-options" data-email-options hidden>
-              <span>Write in:</span>
-              <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sticker_inc@yahoo.com&amp;su=QA%20Inquiry" target="_blank" rel="noreferrer">Gmail</a>
-              <a href="https://outlook.live.com/mail/0/deeplink/compose?to=sticker_inc@yahoo.com&amp;subject=QA%20Inquiry" target="_blank" rel="noreferrer">Outlook</a>
-              <a href="https://compose.mail.yahoo.com/?to=sticker_inc@yahoo.com&amp;subject=QA%20Inquiry" target="_blank" rel="noreferrer">Yahoo</a>
-              <a href="mailto:sticker_inc@yahoo.com?subject=QA%20Inquiry">Mail app</a>
+            <div class="terminal-body">
+              <p class="contact-kicker">Best next step</p>
+              <p class="contact-cta-copy">
+                Start with the channel that fits your hiring flow best. Upwork works well for active engagements,
+                while LinkedIn, GitHub, and email add more context before we talk.
+              </p>
+              <div class="contact-actions">
+                <a class="button button-primary" href="https://www.upwork.com/freelancers/~0150bbcc316b3fb998" target="_blank" rel="noreferrer">Hire on Upwork</a>
+                <a class="button button-secondary" href="https://www.linkedin.com/in/bayuari/" target="_blank" rel="noreferrer">View LinkedIn</a>
+                <a class="button button-secondary" href="https://github.com/BayuAri" target="_blank" rel="noreferrer">View GitHub</a>
+                <a class="button button-secondary" href="mailto:sticker_inc@yahoo.com?subject=QA%20Inquiry" data-email="sticker_inc@yahoo.com" title="sticker_inc@yahoo.com">Email Inquiry</a>
+              </div>
+              <div class="email-options" data-email-options hidden>
+                <span>Write in:</span>
+                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sticker_inc@yahoo.com&amp;su=QA%20Inquiry" target="_blank" rel="noreferrer">Gmail</a>
+                <a href="https://outlook.live.com/mail/0/deeplink/compose?to=sticker_inc@yahoo.com&amp;subject=QA%20Inquiry" target="_blank" rel="noreferrer">Outlook</a>
+                <a href="https://compose.mail.yahoo.com/?to=sticker_inc@yahoo.com&amp;subject=QA%20Inquiry" target="_blank" rel="noreferrer">Yahoo</a>
+                <a href="mailto:sticker_inc@yahoo.com?subject=QA%20Inquiry">Mail app</a>
+              </div>
             </div>
           </div>
         </div>
         <div class="contact-notes">
           <span>Best fit: SaaS and growth-stage teams</span>
           <span>Capacity: 30 to 45 hrs/week</span>
+          <span>Timezone: UTC+07, async-first with overlap hours</span>
           <span>Focus: mobile and web product QA</span>
         </div>
       </section>
@@ -533,7 +695,7 @@
 
     <footer class="site-footer">
       <p>Bayu Ari · Senior Manual QA Consultant · Indonesia</p>
-      <p>© <span id="year"></span></p>
+      <p><span class="pass-text">●</span> build passing · © <span id="year"></span></p>
     </footer>
   </div>
 
