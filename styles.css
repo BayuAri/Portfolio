@@ -1571,6 +1571,10 @@ main {
   grid-template-columns: minmax(0, 720px);
 }
 
+.testimonial-grid-single {
+  grid-template-columns: minmax(0, 720px);
+}
+
 .testimonial-featured {
   background:
     linear-gradient(135deg, rgba(63, 185, 80, 0.1), transparent 60%),
