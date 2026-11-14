@@ -15,8 +15,7 @@ Live site: https://bayuari.github.io/Portfolio/
 | Client rating | 4.98 / 5 from 77 reviews |
 | Hire-again rate | 94.6% |
 | Serving since | 2013 |
-| Rate | $66.67/hr |
-| Availability | 30–45 hrs/week, contract-to-hire open |
+| Availability | 15–25 hrs/week, contract-to-hire open |
 | Location | Bekasi, Indonesia (UTC+07), async-first with overlap hours |
 
 ## What the site covers
