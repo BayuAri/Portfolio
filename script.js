@@ -128,7 +128,10 @@ if ("IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.18 }
+    // Trigger once any part of the section is 10% above the bottom of the
+    // viewport. A ratio threshold would never fire for sections taller than
+    // the viewport divided by that ratio (e.g. Case Studies on phones).
+    { threshold: 0, rootMargin: "0px 0px -10% 0px" }
   );
 
   revealItems.forEach((item) => observer.observe(item));
